@@ -9,7 +9,7 @@ export default function NavMenu({ targRef }) {
 
     return (
         <div className="nav">
-            <a onClick={handleClickMain}><Logo height={75} width={75}></Logo></a>
+            <a onClick={handleClickMain}><Logo height={55} width={55}></Logo></a>
             <a onClick={handleClickMain}><h7 className="compName">Дом здесь</h7></a>
         </div>
     )
