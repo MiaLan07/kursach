@@ -9,13 +9,12 @@ import { useRef, useState } from 'react';
 function App() {
     const [fullscreenTag, setFullTag] = useState(null)
     const targRefMain = useRef(null)
-    const targRefChem = useRef(null)
     const targRefOffers = useRef(null)
     const images = ['https://penzavzglyad.ru/images/uploads/%D0%B5%D0%B2%D1%80%D0%BE%D0%B4%D0%B2%D1%83%D1%88%D0%BA%D0%B0.jpg', 'https://doka-stroi.ru/upload/iblock/817/dzouozy7zaiwb5dckg08shaf8ycn4kjp.png', 'https://i.pinimg.com/originals/21/03/5e/21035ed43cd2301052d8309edf6ed0f7.jpg']
 
     return (
         <div className="App">
-            <NavMenu targRefMain={targRefMain} targRefChem={targRefChem} targRefOffer={targRefOffers}></NavMenu>
+            <NavMenu targRefMain={targRefMain} targRefOffer={targRefOffers}></NavMenu>
             <MainPage targRefMain={targRefMain}></MainPage>
             <OpisPage></OpisPage>
             <ChemesPage targRefChem={targRefChem}/>

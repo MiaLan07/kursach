@@ -1,14 +1,9 @@
 import { ReactComponent as Logo } from '../imgs/icons/logo-min.svg'
 
-export default function NavMenu({ targRefMain, targRefChem, targRefOffer }) {
+export default function NavMenu({ targRefMain, targRefOffer }) {
     function handleClickMain() {
         if(targRefMain.current) {
             targRefMain.current.scrollIntoView({ behavior: "smooth"})
-        }
-    }
-    function handleClickChem() {
-        if(targRefChem.current) {
-            targRefChem.current.scrollIntoView({ behavior: "smooth"})
         }
     }
     function handleClickOffe() {
