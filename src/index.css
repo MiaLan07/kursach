@@ -38,6 +38,27 @@ code {
 a:hover {
   cursor: pointer;
 }
+a {
+  transition: all 0.5s;
+}
+.menu {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row-reverse;
+  padding: 20px;
+  gap: 20px;
+}
+.menu a {
+  display: inline-block;
+  will-change: transform, text-shadow;
+  font-size: 17.5px;
+}
+.menu a:hover {
+  position: relative;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
 .main {
   padding: 110px 150px;
@@ -85,7 +106,7 @@ h1.compName {
   margin: 30px;
   transform: scale(1.5)
 }
-.opis h2 {
+h2 {
   margin: 0;
   color: rgb(31, 50, 107);
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -134,9 +155,103 @@ h1.compName {
   margin: 30px 10px;
 }
 
-.shema {
+.chemes {
+  margin: 0;
+  height: max-content;
+  padding: 50px 150px;
+}
+div.shema {
   background-color: white;
-  width: min-content;
-  height: min-content;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+svg.shema {
+  margin: 0;
+  padding: 0;
+}
+.grid#chemes {
+  margin: 40px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: rgb(248, 208, 184);
+  border-radius: 10px;
+  overflow: hidden;
+}
+div.opisray {
+  width: 100%;
+  max-width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
+p.opisray {
+  margin: 0;
+  font-size: 16.3px;
+  line-height: 20px;
+  text-indent: 30px;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  color: rgb(31, 50, 107);
+  font-weight: 600;
+  margin: 0;
+
+}
+
+.costs {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 20px
+}
+.costs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin: 10px;
+}
+.costs div h6 {
+  margin: 0;
+  color: rgb(31, 50, 107);
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.costs div p {
+  font-size: 12px;
+  margin: 0;
+}
+.opisray button {
+  margin: 20px 0 0 0;
+}
+
+#chema2 {
+  background-image: url('./imgs/схема2.png');
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0;
+}
+#chema1 {
+  background-image: url('./imgs/shema1.png');
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}

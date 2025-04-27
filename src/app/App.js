@@ -7,13 +7,14 @@ import { useRef } from 'react';
 
 function App() {
     const targRefMain = useRef(null)
+    const targRefChem = useRef(null)
 
     return (
         <div className="App">
-            <NavMenu targRef={targRefMain}></NavMenu>
+            <NavMenu targRefMain={targRefMain} targRefChem={targRefChem}></NavMenu>
             <MainPage targRefMain={targRefMain}></MainPage>
             <OpisPage></OpisPage>
-            <ChemesPage/>
+            <ChemesPage targRefChem={targRefChem}/>
         </div>
     );
 }
