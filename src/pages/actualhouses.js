@@ -1,10 +1,5 @@
-import { useState } from "react"
-import { ReactComponent as AllPlus } from '../imgs/icons/доступность-min.svg'
-import Carousel from "../shared/carousel.js";
 
-
-export default function HomesPage({ refOffers }) {
-    const [openned, setOpenned] = useState('none');
+export default function HomesPage({ refOffers, fullscreenTag, setFullTag, images }) {
 
 
     return (
@@ -13,7 +8,7 @@ export default function HomesPage({ refOffers }) {
             <div className="offers">
                 <div className="offer" id="first">
                     <h3>Евро-2шка</h3>
-                    <Carousel images={['https://penzavzglyad.ru/images/uploads/%D0%B5%D0%B2%D1%80%D0%BE%D0%B4%D0%B2%D1%83%D1%88%D0%BA%D0%B0.jpg']}/>
+                    <img src={images[0]} alt={`Фото 1`} onClick={() => setFullTag(images[0])} className="carousel-img"/>
                     <div className="costs homes">
                         <div>
                             <h6>48м<sup>2</sup></h6>
@@ -29,11 +24,11 @@ export default function HomesPage({ refOffers }) {
                         </div>
                     </div>
                     <p>Евро-двушка в ЖК &laquo;Омега3&raquo; — это современное и функциональное жилье, идеально подходящее для комфортной жизни. Квартира сочетает просторную гостиную с кухонной зоной, отдельную спальню, современную ванную комнату и балкон с видом на реку Салгир.</p>
-                    <button className="btnForm" onClick={() => setOpenned('first')}>Подробнее</button>
+                    <button className="btnForm" onClick={() => setFullTag('first')}>Подробнее</button>
                 </div>
                 <div className="offer" id="second">
                     <h3>3-х комнатная квартира</h3>
-                    <Carousel images={['https://doka-stroi.ru/upload/iblock/817/dzouozy7zaiwb5dckg08shaf8ycn4kjp.png']}/>
+                    <img src={images[1]} alt={`Фото 2`} onClick={() => setFullTag(images[1])} className="carousel-img"/>
                     <div className="costs homes">
                         <div>
                             <h6>85м<sup>2</sup></h6>
@@ -49,11 +44,11 @@ export default function HomesPage({ refOffers }) {
                         </div>
                     </div>
                     <p>Эта уютная и просторная квартира расположена в престижном Киевском районе, который славится удобной инфраструктурой и комфортной городской средой. Киевский район — это идеальное место для комфортной жизни, где сочетаются удобство, безопасность и развитая инфраструктура.</p>
-                    <button className="btnForm" onClick={() => setOpenned('second')}>Подробнее</button>
+                    <button className="btnForm" onClick={() => setFullTag('second')}>Подробнее</button>
                 </div>
                 <div className="offer" id="third">
                     <h3>Студия</h3>
-                    <Carousel images={['https://i.pinimg.com/originals/21/03/5e/21035ed43cd2301052d8309edf6ed0f7.jpg']}/>
+                    <img src={images[2]} alt={`Фото 3`} onClick={() => setFullTag(images[2])} className="carousel-img"/>
                     <div className="costs homes">
                         <div>
                             <h6>32м<sup>2</sup></h6>
@@ -69,67 +64,9 @@ export default function HomesPage({ refOffers }) {
                         </div>
                     </div>
                     <p>Студия в ЖК &laquo;Омега3&raquo; — это компактное и уютное жилье, идеально подходящее для молодых специалистов, студентов или тех, кто ценит минимализм и функциональность. Квартира объединяет гостиную с кухонной зоной, современную ванную комнату и балкон с видом на реку Салгир.</p>
-                    <button className="btnForm" onClick={() => setOpenned('third')}>Подробнее</button>
+                    <button className="btnForm" onClick={() => setFullTag('third')}>Подробнее</button>
                 </div>
             </div>
-            {openned === 'first' && (<div className="fulloffer" id='first' onClick={() => setOpenned(null)}>
-                <h3>Евро-двушка в ЖК &laquo;Омега3&raquo;</h3>
-                <Carousel images={['https://penzavzglyad.ru/images/uploads/%D0%B5%D0%B2%D1%80%D0%BE%D0%B4%D0%B2%D1%83%D1%88%D0%BA%D0%B0.jpg']}/>
-                <div className="costs homes">
-                    <div>
-                        <h6>48м<sup>2</sup></h6>
-                        <p>площадь</p>
-                    </div>
-                    <div>
-                        <h6>5 280 000 р.</h6>
-                        <p>стоимость</p>
-                    </div>
-                    <div>
-                        <h6>110 000 р.</h6>
-                        <p>за м<sup>2</sup></p>
-                    </div>
-                </div>
-                <p>Эта евро-двушка предлагает просторную кухню-гостиную площадью 22 кв.м, что позволяет создать уютное пространство для отдыха и приема гостей. Спальня обеспечивает комфорт и уединение, а панорамные окна наполняют квартиру естественным светом. Ванная комната оборудована современной сантехникой, а балкон станет отличным местом для утреннего кофе с видом на реку.</p><p>ЖК &laquo;Омега3&raquo; предлагает развитую инфраструктуру: детские и спортивные площадки, зоны отдыха, гостевую парковку и системы видеонаблюдения для безопасности жителей. Близость к центральному автовокзалу, школе и гипермаркету делает этот вариант особенно удобным для семей и активных горожан.</p>
-                <button className="btnForm" onClick={() => {setOpenned(null)}}>Купить</button>
-            </div>)}
-            {openned === 'second' && (<div className="fulloffer" id="second" onClick={() => setOpenned(null)}>
-                <h3>3-х комнатная квартира в Киевском районе</h3>
-                    <Carousel images={['https://doka-stroi.ru/upload/iblock/817/dzouozy7zaiwb5dckg08shaf8ycn4kjp.png']}/>
-                    <div className="costs homes">
-                        <div>
-                            <h6>85м<sup>2</sup></h6>
-                            <p>площадь</p>
-                        </div>
-                        <div>
-                            <h6>9 775 000р.</h6>
-                            <p>стоимость</p>
-                        </div>
-                        <div>
-                            <h6>115 000р.</h6>
-                            <p>за м<sup>2</sup></p>
-                        </div>
-                    </div>
-                    <p>Квартира включает три светлые комнаты с высокими потолками, просторную кухню с современной техникой и стильным гарнитуром, а также две ванные комнаты с качественной сантехникой. В гостиной установлены панорамные окна, которые наполняют пространство естественным светом и открывают прекрасный вид на парк с прудом.</p><p>Жильё расположено в доме с благоустроенной территорией, где есть большая парковка, детская площадка и зоны отдыха. В шаговой доступности находятся школа, спортивный зал, крупный продуктовый магазин и остановки общественного транспорта, обеспечивающие удобное сообщение с другими районами города.</p>
-            </div>)}
-            {openned === 'third' && (<div className="fulloffer" id="third" onClick={() => setOpenned(null)}>
-                <h3>Студия в ЖК &laquo;Омега3&raquo;</h3>
-                    <Carousel images={['https://i.pinimg.com/originals/21/03/5e/21035ed43cd2301052d8309edf6ed0f7.jpg']}/>
-                    <div className="costs homes">
-                        <div>
-                            <h6>32м<sup>2</sup></h6>
-                            <p>площадь</p>
-                        </div>
-                        <div>
-                            <h6>3 520 000р.</h6>
-                            <p>стоимость</p>
-                        </div>
-                        <div>
-                            <h6>110 000р.</h6>
-                            <p>за м<sup>2</sup></p>
-                        </div>
-                    </div>
-                    <p>Эта студия предлагает открытую планировку, создающую ощущение простора и комфорта. Кухонная зона оборудована современной техникой и удобной рабочей поверхностью, а зона отдыха позволяет разместить удобный диван или кровать. Панорамные окна наполняют квартиру естественным светом, а балкон станет отличным местом для утреннего кофе с видом на реку.</p><p>ЖК Омега3 предлагает развитую инфраструктуру: детские и спортивные площадки, зоны отдыха, гостевую парковку и системы видеонаблюдения для безопасности жителей. Близость к центральному автовокзалу, школе и гипермаркету делает этот вариант особенно удобным для активных горожан.</p>
-            </div>)}
         </div>
     )
 }
