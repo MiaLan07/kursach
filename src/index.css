@@ -1,3 +1,12 @@
+:root {
+  --main-ligth: rgb(248, 208, 184);
+  --main-darker: rgb(240, 178, 139);
+  --accent: rgb(29, 101, 85);
+  --accent-ligter: rgba(31, 50, 107, 0.5);
+  --text: rgb(0, 0, 0);
+  --text-ligther: rgb(70, 70, 70);
+  --shadows: rgba(0, 0, 0, 0.4);
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,21 +16,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  background-color: rgb(240, 178, 139);
+  background-color: var(--main-darker);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .compName {
-  color: rgb(31, 50, 107);
+  color: var(--accent);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
   font-size: 32px;
   margin: 0;
 }
 .nav {
-  background-color:rgb(248, 208, 184);
+  background-color:var(--main-ligth);
   height: min-content;
   padding: 10px;
   width: 100vw;
@@ -57,9 +66,8 @@ a {
 .menu a:hover {
   position: relative;
   transform: scale(1.1);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 5px var(--shadows);
 }
-
 .main {
   padding: 110px 150px;
   height: 100vh;
@@ -75,10 +83,9 @@ a {
   background-blend-mode: overlay;
   margin: 0;
 }
-
 .btnForm {
   padding: 10px 15px;
-  background-color: rgb(31, 50, 107);
+  background-color: var(--accent);
   color: rgb(255, 255, 255);
   font-weight: 500;
   font-family: 'Times New Roman', Times, serif;
@@ -92,7 +99,7 @@ a {
 }
 .btnForm:hover {
   transform: scale(1.2);
-  box-shadow: 2.5px 2.5px 0 rgba(31, 50, 107, 0.5);
+  box-shadow: 2.5px 2.5px 0 var(--accent-ligter);
 }
 .main .btnForm {
   margin: 100px 10px 10px;
@@ -108,14 +115,14 @@ h1.compName {
 }
 h2 {
   margin: 0;
-  color: rgb(31, 50, 107);
+  color: var(--accent);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 700;
   text-align: center;
   font-size: 30px;
 }
 .opis {
-  background-color: rgb(240, 178, 139);
+  background-color: var(--main-darker);
   margin: 0;
   height: max-content;
   padding: 50px 150px;
@@ -124,7 +131,7 @@ h2 {
 .opis p {
   width: 100%;
   text-align: center;
-  color: rgb(100, 100, 100);
+  color: var(--text-ligther);
 }
 .opisanie {
   display: grid;
@@ -137,7 +144,7 @@ h2 {
   text-align: left;
   line-height: 24px;
   font-size: 17px;
-  color: rgb(70, 70, 70);
+  color: var(--text-ligther);
 }
 .imageOpis {
   background-image: url('./imgs/jkforopis.jpg');
@@ -179,7 +186,7 @@ svg.shema {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: rgb(248, 208, 184);
+  background-color: var(--main-ligth);
   border-radius: 10px;
   overflow: hidden;
   margin: 20px 0;
@@ -197,7 +204,7 @@ div.opisray {
 }
 div.chemes div.grid:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px var(--shadows);
 }
 p.opisray {
   margin: 0;
@@ -209,7 +216,7 @@ h3 {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 25px;
-  color: rgb(31, 50, 107);
+  color: var(--accent);
   font-weight: 600;
   margin: 0;
   margin-bottom: 15px;
@@ -230,7 +237,7 @@ h3 {
 }
 .costs div h6 {
   margin: 0;
-  color: rgb(31, 50, 107);
+  color: var(--accent);
   font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -266,7 +273,7 @@ h3 {
   gap: 20px;
 }
 .offer {
-  background-color: rgb(248, 208, 184);
+  background-color: var(--main-ligth);
   padding: 20px;
   border-radius: 10px;
   display: flex;
@@ -276,7 +283,7 @@ h3 {
 }
 .offer:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px var(--shadows);
 }
 .offer p {
   line-height: 21px;
@@ -298,7 +305,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(248, 208, 184);
+  background: var(--main-ligth);
   display: flex;
   padding: 50px;
   box-sizing: border-box;

@@ -17,9 +17,8 @@ function App() {
             <NavMenu targRefMain={targRefMain} targRefOffer={targRefOffers}></NavMenu>
             <MainPage targRefMain={targRefMain}></MainPage>
             <OpisPage></OpisPage>
-            <ChemesPage targRefChem={targRefChem}/>
+            <ChemesPage/>
             <HomesPage refOffers={targRefOffers} fullscreenTag={fullscreenTag} setFullTag={setFullTag} images={images}/>
-
             
             {fullscreenTag === 'first' && (<div className="fulloffer" id='first' onClick={() => setFullTag(null)}>
                 <h3>Евро-двушка в ЖК &laquo;Омега3&raquo;</h3>
@@ -82,8 +81,8 @@ function App() {
                 <button className="btnForm" onClick={() => {setFullTag(null)}}>Купить</button>
             </div>)}
             {typeof fullscreenTag === 'string' && fullscreenTag.startsWith('http') && (<div className="fullscreen-over" onClick={() => setFullTag(null)}>
-                    <img src={fullscreenTag} alt="fullscreen" className="fullscreen-img"/>
-                </div>)}
+                <img src={fullscreenTag} alt="fullscreen" className="fullscreen-img"/>
+            </div>)}
         </div>
     );
 }

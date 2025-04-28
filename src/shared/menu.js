@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from '../imgs/icons/logo-min.svg'
+import { ReactComponent as Logo } from '../imgs/icons/лого-min.svg'
 
 export default function NavMenu({ targRefMain, targRefOffer }) {
     function handleClickMain() {
@@ -17,8 +17,8 @@ export default function NavMenu({ targRefMain, targRefOffer }) {
                 <a onClick={handleClickMain}><Logo height={55} width={55}></Logo></a>
                 <a onClick={handleClickMain}><h7 className="compName">Дом здесь</h7></a>
             <div className="menu">
-                <a onClick={handleClickChem}>Районы</a>
                 <a onClick={handleClickOffe}>Квартиры</a>
+                <a>Преимущества</a>
                 <a>Секция 3</a>
             </div>
         </div>
