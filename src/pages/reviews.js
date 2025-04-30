@@ -1,4 +1,5 @@
 import { useState } from "react"
+import RevItem from "../shared/revitem"
 
 
 export default function ReviewsPage({ targRevPage }) {
@@ -21,16 +22,7 @@ export default function ReviewsPage({ targRevPage }) {
             <h2>Отзывы наших клиентов</h2>
             <div className="revs">
                 {revsData.map((rev, i) => (
-                    <div key={i} className="rev" onClick={() => toggleRev(i)}>
-                        <h3>{rev.title}</h3>
-                        {activeRev === i && (
-                            <div>
-                                <p className="person">{rev.person}</p>
-                                <p className="service">{rev.service}</p>
-                                <p>{rev.text}</p>
-                            </div>
-                        )}
-                    </div>
+                    <RevItem key={i} rev={rev} toggleRev={toggleRev} index={i} activeRev={activeRev}/>
                 ))}
             </div>
         </div>
