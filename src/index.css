@@ -1,7 +1,7 @@
 :root {
   --main-ligth: rgb(248, 208, 184);
   --main-darker: rgb(240, 178, 139);
-  --accent: rgb(29, 101, 85);
+  --accent: rgb(24, 82, 69);
   --accent-ligter: rgba(31, 50, 107, 0.5);
   --text: rgb(0, 0, 0);
   --text-ligther: rgb(70, 70, 70);
@@ -384,3 +384,106 @@ h3 {
   margin: 0;
   padding: 0;
 }
+.plusesPage {
+  padding: 50px 150px;
+}
+.plusesPage p {
+ margin: 20px 0px;
+ text-align: center;
+ color: var(--text-ligther);
+}
+.pluses ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url('./imgs/icons/доступность-min.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pluses {
+  margin: 15px 225px;
+}
+.pluses ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 40px;
+  margin: 10px;
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 800;
+}
+.pluses ul li p {
+  text-align: right;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  max-height: 0;
+  width: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: max-height 1.5s ease, margin 1.5s ease;
+}
+.pluses ul li:hover p {
+  max-height: 200px;
+  margin: 15px;
+}
+
+.reviews {
+  padding: 50px 150px;
+}
+.revs {
+  margin: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.revs div {
+  background-color: var(--main-ligth);
+  border-radius: 10px;
+  padding: 20px 15.5px;
+  transition: all 0.5s;
+  font-size: 16.5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.revs div h3 {
+  margin: 0;
+}
+.revs div.rev:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--shadows);
+}
+.revs div div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+.revs div div .person {
+  color: var(--accent);
+  font-weight: 700;
+}
+.revs div div .service {
+  font-weight: 200;
+  font-size: 15px;
+}
+.revs div div .person, .revs div div .service {
+  grid-column: 1;
+  margin: 5px;
+  padding: 0;
+}
+.revs div div p:last-child {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  font-size: 16px;
+  margin: auto;
+}
+.rev {
+  height: auto;
+}
+
