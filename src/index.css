@@ -491,14 +491,12 @@ h3 {
 .faq {
   padding: 50px 150px;
 }
-
 .faqlist {
   margin: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
 }
-
 .faqitem {
   background-color: var(--main-ligth);
   border-radius: 10px;
@@ -510,28 +508,22 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-
 .faqitem h3 {
   margin: 0;
 }
-
 .faqitem:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px var(--shadows);
   cursor: pointer;
 }
-
-
 .faqitem div p {
   font-size: 16px;
   margin: 10px 25px;
   text-align: center;
 }
-
 .faqitem div {
   display: none;
 }
-
 .faqitem.open div {
   display: block;
 }
