@@ -313,10 +313,6 @@ h3 {
   align-items: center;
   z-index: 10000;
 }
-.fulloffer .carousel-img {
-  width: 27%;
-  object-fit: contain;
-}
 .fulloffer .carousel {
   margin: 1.25rem;
   padding: 0;
@@ -375,13 +371,9 @@ h3 {
 .fulloffer .carousel-img {
   margin: 1.25rem;
   z-index: 100;
-}
-.fulloffer#second .carousel-img, .fulloffer#third .carousel-img {
-  height: 31.875rem;
-  width: 31.25rem;
-  object-fit: cover;
+  width: 400px;
   margin: 0;
-  padding: 0;
+  object-fit: contain;
 }
 .plusesPage {
   padding: 3.125rem 9.375rem;
