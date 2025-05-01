@@ -2,33 +2,51 @@ import { ReactComponent as Logo } from '../imgs/icons/лого-min.svg'
 
 export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRevPage, targRegFAQ, targAbPage }) {
     function handleClickMain() {
-        if(targRefMain.current) {
-            targRefMain.current.scrollIntoView({ behavior: "smooth"})
+        if (targRefMain.current) {
+            window.scrollTo({
+                top: targRefMain.current.offsetTop - 90,
+                behavior: "smooth"
+            });
         }
     }
     function handleClickOffe() {
-        if(targRefOffer.current) {
-            targRefOffer.current.scrollIntoView({ behavior: 'smooth'})
+        if (targRefOffer.current) {
+            window.scrollTo({
+                top: targRefOffer.current.offsetTop - 100,
+                behavior: "smooth"
+            });
         }
     }
     function handleClickPluses() {
-        if(targPlusRef.current) {
-            targPlusRef.current.scrollIntoView({ behavior: "smooth"})
+        if (targPlusRef.current) {
+            window.scrollTo({
+                top: targPlusRef.current.offsetTop - 90,
+                behavior: "smooth"
+            });
         }
     }
     function handleClickRevs() {
-        if(targRevPage.current) {
-            targRevPage.current.scrollIntoView({ behavior: 'smooth'})
+        if (targRevPage.current) {
+            window.scrollTo({
+                top: targRevPage.current.offsetTop - 90,
+                behavior: "smooth"
+            });
         }
     }
     function handleClickFAQ() {
-        if(targRegFAQ.current) {
-            targRegFAQ.current.scrollIntoView({ behavior: 'smooth'})
+        if (targRegFAQ.current) {
+            window.scrollTo({
+                top: targRegFAQ.current.offsetTop - 90,
+                behavior: "smooth"
+            });
         }
     }
     function handleClickAb() {
-        if(targAbPage.current) {
-            targAbPage.current.scrollIntoView({ behavior: "smooth"})
+        if (targAbPage.current) {
+            window.scrollTo({
+                top: targAbPage.current.offsetTop - 25,
+                behavior: "smooth"
+            });
         }
     }
 

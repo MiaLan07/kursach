@@ -2,7 +2,7 @@
   --main-ligth: rgb(248, 208, 184);
   --main-darker: rgb(240, 178, 139);
   --accent: rgb(24, 82, 69);
-  --accent-ligter: rgba(31, 50, 107, 0.5);
+  --accent-ligter: rgba(50, 164, 140, 0.7);
   --text: rgb(0, 0, 0);
   --text-ligther: rgb(70, 70, 70);
   --shadows: rgba(0, 0, 0, 0.4);
@@ -99,7 +99,7 @@ a {
 }
 .btnForm:hover {
   transform: scale(1.2);
-  box-shadow: 2.5px 2.5px 0 var(--accent-ligter);
+  box-shadow: 2.5px 2.5px 5px var(--accent-ligter);
 }
 .main .btnForm {
   margin: 100px 10px 10px;
@@ -508,7 +508,12 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.faqitem h3 {
+h4 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 600;
   margin: 0;
 }
 .faqitem:hover {
@@ -567,4 +572,72 @@ accent {
   color: var(--accent);
   margin: 0;
   padding: 0;
+}
+
+.form {
+  text-align: center;
+  padding: 50px 150px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--main-ligth);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  color: var(--accent);
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+option[value=''], select[value=''] {
+  color: rgb(140, 140, 140);
+}
+textarea {
+  resize: none;
+}
+form .btnForm {
+  margin-bottom: 0;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+.footer h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--accent-ligter);
+}
+.footer .contacts {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer .btnForm {
+  margin: 0;
 }
