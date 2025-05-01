@@ -1,6 +1,6 @@
 import { ReactComponent as Logo } from '../imgs/icons/лого-min.svg'
 
-export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRevPage, targRegFAQ }) {
+export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRevPage, targRegFAQ, targAbPage }) {
     function handleClickMain() {
         if(targRefMain.current) {
             targRefMain.current.scrollIntoView({ behavior: "smooth"})
@@ -26,6 +26,11 @@ export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRe
             targRegFAQ.current.scrollIntoView({ behavior: 'smooth'})
         }
     }
+    function handleClickAb() {
+        if(targAbPage.current) {
+            targAbPage.current.scrollIntoView({ behavior: "smooth"})
+        }
+    }
 
     return (
         <div className="nav">
@@ -35,6 +40,7 @@ export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRe
                 <a onClick={handleClickOffe}>Квартиры</a>
                 <a onClick={handleClickPluses}>Преимущества</a>
                 <a onClick={handleClickRevs}>Отзывы</a>
+                <a onClick={handleClickAb}>О компании</a>
                 <a onClick={handleClickFAQ}>FAQ</a>
             </div>
         </div>

@@ -7,6 +7,7 @@ import HomesPage from '../pages/actualhouses';
 import PlusesPage from '../pages/pluses';
 import ReviewsPage from '../pages/reviews';
 import FAQPage from '../pages/FAQ';
+import AboutPage from '../pages/about';
 import { useRef, useState } from 'react';
 
 function App() {
@@ -16,18 +17,20 @@ function App() {
     const targPlusRef = useRef(null)
     const targRevPage = useRef(null)
     const targRegFAQ = useRef(null)
+    const targAbPage = useRef(null)
     const images = ['https://penzavzglyad.ru/images/uploads/%D0%B5%D0%B2%D1%80%D0%BE%D0%B4%D0%B2%D1%83%D1%88%D0%BA%D0%B0.jpg', 'https://doka-stroi.ru/upload/iblock/817/dzouozy7zaiwb5dckg08shaf8ycn4kjp.png', 'https://i.pinimg.com/originals/21/03/5e/21035ed43cd2301052d8309edf6ed0f7.jpg']
 
     return (
         <div className="App">
-            <NavMenu targRefMain={targRefMain} targRefOffer={targRefOffers} targPlusRef={targPlusRef} targRevPage={targRevPage} targRegFAQ={targRegFAQ}/>
+            <NavMenu targRefMain={targRefMain} targRefOffer={targRefOffers} targPlusRef={targPlusRef} targRevPage={targRevPage} targRegFAQ={targRegFAQ} targAbPage={targAbPage}/>
             <MainPage targRefMain={targRefMain}/>
             <OpisPage/>
             <ChemesPage/>
             <HomesPage refOffers={targRefOffers} fullscreenTag={fullscreenTag} setFullTag={setFullTag} images={images}/>
             <PlusesPage targPlusRef={targPlusRef}/>
             <ReviewsPage targRevPage={targRevPage}/>
-            <FAQPage targRegFAQ={targRegFAQ}/>
+            <AboutPage targAbPage={targAbPage}/>
+            <FAQPage targFaqPage={targRegFAQ}/>
             
             {fullscreenTag === 'first' && (<div className="fulloffer" id='first' onClick={() => setFullTag(null)}>
                 <h3>Евро-двушка в ЖК &laquo;Омега3&raquo;</h3>
