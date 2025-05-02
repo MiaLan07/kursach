@@ -1,0 +1,792 @@
+:root {
+  --main-ligth: rgb(248, 208, 184);
+  --main-darker: rgb(240, 178, 139);
+  --accent: rgb(24, 82, 69);
+  --accent-ligter: rgba(50, 164, 140, 0.7);
+  --text: rgb(0, 0, 0);
+  --text-ligther: rgb(70, 70, 70);
+  --shadows: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 1024px) {
+  .nav {
+    grid-template-columns: 1fr 1fr 3fr;
+    padding: 0.75rem;
+  }
+  .menu {
+    gap: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  .main {
+    padding: 5vh 6vw;
+    height: 42.7rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .btnForm {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .compName {
+    font-size: 1.75rem;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+  .btnForm {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 5px;
+  }
+
+  .opis {
+    padding: 1.5rem 6rem;
+  }
+  .opisanie {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .opisanie p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chemes {
+    padding: 1.5rem 6rem;
+  }
+  .grid#chemes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  #chema1, #chema2 {
+    display: none;
+  }
+  .opisray p {
+    font-size: 1rem;
+  }
+  .opisray {
+    margin: 0;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  .costs {
+    flex-wrap: wrap;
+  }
+
+  .offers {
+    padding: 3rem 6rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .offer {
+    padding: 1rem;
+  }
+  .offer p {
+    font-size: 0.9rem;
+  }
+  .fulloffer {
+    padding: 2.5rem;
+  }
+  .fulloffer p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .carousel-img {
+    height: 10rem;
+  }
+  .costs.homes {
+    gap: 0;
+  }
+  .costs.homes div {
+    margin: 0.3rem;
+  }
+
+  .plusesPage {
+    padding: 2.5rem 6rem;
+  }
+  .pluses {
+    margin: 0.938rem 150px;
+  }
+  .pluses ul li {
+    font-size: 1.125rem;
+    padding-left: 2.25rem;
+  }
+  .pluses ul li p {
+    font-size: 1rem;
+  }
+
+  .reviews {
+    padding: 2.5rem 6rem;
+  }
+  .revs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .revs div {
+    padding: 1rem 0.85rem;
+    font-size: 0.95rem;
+  }
+  .revs div div .service {
+    font-size: 0.875rem;
+  }
+
+  .faq {
+    padding: 2.5rem 6rem;
+  }
+  .faqlist {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .faqitem {
+    padding: 1rem 0.85rem;
+    font-size: 0.95rem;
+  }
+  h4 {
+    font-size: 1.15rem;
+  }
+  .faqitem div p {
+    font-size: 0.95rem;
+  }
+
+  .about {
+    padding: 2.5rem 6rem;
+  }
+  .about div p {
+    font-size: 1rem;
+    margin: 0.313rem 2rem;
+  }
+  .achiev {
+    margin: 1.25rem;
+  }
+  .achiev ul li {
+    font-size: 1rem;
+    padding-left: 1.75rem;
+  }
+
+  .form {
+    padding: 2.5rem 6rem;
+  }
+  form {
+    max-width: 550px;
+    padding: 1rem 1.75rem;
+  }
+  input, select, textarea {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 2rem;
+  }
+  .footer h2 {
+    font-size: 1.25rem;
+  }
+  .footer .contacts {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    padding: 0.5rem;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgb(248, 208, 184);
+    padding: 1rem;
+    z-index: 100;
+  }
+  .menu.open {
+    display: flex;
+    width: 100%;
+  }
+  .main {
+    text-align: center;
+    padding: 3rem 2rem;
+    height: 40rem;
+  }
+  .btnForm {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .compName {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .menu a {
+    font-size: 0.95rem;
+  }
+
+  .opis {
+    padding: 2.5rem 4rem;
+  }
+  .opisanie {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .opisanie p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .imageOpis {
+    aspect-ratio: 4/3;
+  }
+
+  .chemes {
+    padding: 2.5rem 4rem;
+  }
+  .grid#chemes {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .opisray p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .offers {
+    padding: 2.5rem 4rem;
+    grid-template-columns: 1fr;
+  }
+  .offer p {
+    font-size: 0.85rem;
+  }
+  .fulloffer {
+    padding: 2rem;
+  }
+  .fulloffer p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .carousel-img {
+    height: 9rem;
+  }
+
+  .plusesPage {
+    padding: 2rem 4rem;
+  }
+  .pluses {
+    margin: 0.938rem 100px;
+  }
+  .pluses ul li {
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+  .pluses ul li p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .reviews {
+    padding: 2rem 4rem;
+  }
+  .revs {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+  .revs div {
+    padding: 0.9rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .revs div div .service {
+    font-size: 0.85rem;
+  }
+  .revs div div p:last-child {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .faq {
+    padding: 2rem 4rem;
+  }
+  .faqlist {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+  .faqitem {
+    padding: 0.9rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  .faqitem div p {
+    font-size: 0.9rem;
+  }
+
+  .about {
+    padding: 2rem 4rem;
+  }
+  .about div p {
+    font-size: 0.95rem;
+    margin: 0.313rem 1.5rem;
+  }
+  .achiev {
+    margin: 1rem;
+  }
+  .achiev ul li {
+    font-size: 0.9rem;
+    padding-left: 1.6rem;
+  }
+
+  .form {
+    padding: 2rem 4rem;
+  }
+  form {
+    max-width: 500px;
+    padding: 0.9rem 1.5rem;
+  }
+  input, select, textarea {
+    font-size: 0.9rem;
+  }
+  form label {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 1.75rem;
+  }
+  .footer h2 {
+    font-size: 1.15rem;
+  }
+  .footer .contacts {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: flex;
+    padding: 0.5rem;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main h1.compName {
+    font-size: 1.5rem;
+    max-width: 90%;
+    text-align: center;
+    transform: none;
+  }
+  .main {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .btnForm {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .compName {
+    font-size: 1.25rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .menu a {
+    font-size: 0.875rem;
+  }
+  .btnForm {
+    font-size: 0.85rem;
+  }
+  .main {
+    padding: 2rem 1rem;
+  }
+  .opis {
+    padding: 2rem 2rem;
+  }
+  .opisanie {
+    gap: 1rem;
+  }
+  .opisanie p {
+    font-size: 0.9rem;
+  }
+  .imageOpis {
+    aspect-ratio: 1/1;
+    border-radius: 0.625rem;
+    height: 10rem;
+  }
+
+  .chemes {
+    padding: 2rem 2rem;
+  }
+  .grid#chemes {
+    gap: 1rem;
+  }
+  .opisray p {
+    font-size: 0.9rem;
+  }
+  .costs {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .costs div h6 {
+    font-size: 1.5rem;
+  }
+  .costs div p {
+    font-size: 0.9rem;
+  }
+  .costs div {
+    margin: 0;
+  }
+  .costs div:last-child {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .offers {
+    padding: 2rem 2rem;
+  }
+  .offer {
+    padding: 0.875rem;
+  }
+  .offer p {
+    font-size: 0.8rem;
+  }
+  .fulloffer {
+    padding: 1.5rem;
+  }
+  .fulloffer p {
+    font-size: 0.95rem;
+  }
+  .carousel-img {
+    height: 8rem;
+  }
+  .costs.homes div h6 {
+    font-size: 1.3rem;
+  }
+  .fulloffer .costs.homes div h6 {
+    font-size: 0.95rem;
+  }
+  .fulloffer .costs.homes div p {
+    font-size: 0.75rem;
+  }
+
+  /* .fullscreen-over {
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 1rem;
+  }
+  .fulloffer {
+    width: 90%;
+    max-width: 100vw;
+    max-height: 90vh;
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+  .fulloffer .carousel-img {
+    width: 80%;
+    max-width: 280px;
+    height: auto;
+  } */
+
+  .plusesPage {
+    padding: 1.5rem 2rem;
+  }
+  .pluses {
+    margin: 0.938rem 50px;
+  }
+  .pluses ul li {
+    font-size: 0.9rem;
+    padding-left: 1.75rem;
+  }
+  .pluses ul li p {
+    font-size: 0.875rem;
+  }
+
+  .reviews {
+    padding: 1.5rem 2rem;
+  }
+  .revs {
+    gap: 0.5rem;
+  }
+  .revs div {
+    padding: 0.8rem 0.625rem;
+    font-size: 0.85rem;
+  }
+  .revs div div .service {
+    font-size: 0.8rem;
+  }
+  .revs div div p:last-child {
+    font-size: 0.875rem;
+  }
+
+  .faq {
+    padding: 1.5rem 2rem;
+  }
+  .faqlist {
+    gap: 0.5rem;
+  }
+  .faqitem {
+    padding: 0.8rem 0.625rem;
+    font-size: 0.85rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  .faqitem div p {
+    font-size: 0.85rem;
+  }
+
+  .about {
+    padding: 1.5rem 2rem;
+  }
+  .about div p {
+    font-size: 0.875rem;
+    margin: 0.313rem 1rem;
+  }
+  .achiev {
+    margin: 0.5rem;
+  }
+  .achiev ul {
+    padding-left: 1rem;
+  }
+  .achiev ul li {
+    font-size: 0.85rem;
+    padding-left: 1.5rem;
+  }
+
+  .form {
+    padding: 1.5rem 2rem;
+  }
+  form {
+    max-width: 90%;
+    padding: 0.75rem 1rem;
+  }
+  input, select, textarea {
+    font-size: 0.85rem;
+  }
+  form label {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+  .footer h2 {
+    font-size: 1rem;
+  }
+  .footer p {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .footer .contacts {
+    gap: 0.5rem;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .compName {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .menu a {
+    font-size: 0.8rem;
+  }
+  .nav {
+    padding: 0.4rem;
+    grid-template-columns: 1fr;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .main h1.compName {
+    font-size: 1.3rem;
+    max-width: 85%;
+    text-align: center;
+    transform: none;
+  }
+  .main {
+    padding: 1.5rem 0.5rem;
+  }
+  .btnForm {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .opis {
+    padding: 1.5rem 1rem;
+  }
+  .opisanie {
+    gap: 0.75rem;
+  }
+  .opisanie p {
+    font-size: 0.85rem;
+  }
+  .imageOpis {
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+  }
+  
+  .chemes {
+    padding: 1.5rem 1rem;
+  }
+  .grid#chemes {
+    gap: 0.75rem;
+  }
+  .opisray p {
+    font-size: 0.85rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .costs div h6 {
+    font-size: 1.2rem;
+  }
+
+  .offers {
+    padding: 1.5rem 1rem;
+  }
+  .offer p {
+    font-size: 0.75rem;
+  }
+  .fulloffer {
+    padding: 1.25rem;
+  }
+  .fulloffer p {
+    font-size: 0.85rem;
+  }
+  .carousel-img {
+    height: 7rem;
+  }
+
+  /* .fullscreen-over {
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0.75rem;
+  }
+  .fulloffer {
+    width: 85%;
+    max-width: 100vw;
+    max-height: 85vh;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  .fulloffer .carousel-img {
+    width: 75%;
+    max-width: 240px;
+    height: auto;
+  } */
+
+  .plusesPage {
+    padding: 1.25rem 1rem;
+  }
+  .pluses {
+    margin: 0.938rem 25px;
+  }
+  .pluses ul li {
+    font-size: 0.85rem;
+    padding-left: 2rem;
+  }
+  .pluses ul li p {
+    font-size: 0.8rem;
+  }
+
+  .reviews {
+    padding: 1.25rem 1rem;
+  }
+  .revs {
+    gap: 0.4rem;
+  }
+  .revs div {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  .revs div div .service {
+    font-size: 0.75rem;
+  }
+  .revs div div p:last-child {
+    font-size: 0.85rem;
+  }
+
+  .faq {
+    padding: 1.25rem 1rem;
+  }
+  .faqlist {
+    gap: 0.4rem;
+  }
+  .faqitem {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  h4 {
+    font-size: 0.95rem;
+  }
+  .faqitem div p {
+    font-size: 0.8rem;
+  }
+
+  .about {
+    padding: 1.25rem 1rem;
+  }
+  .about div p {
+    font-size: 0.8rem;
+    margin: 0.313rem 0.75rem;
+  }
+  .achiev {
+    margin: 0.625rem;
+  }
+  .achiev ul li {
+    font-size: 0.8rem;
+    padding-left: 1.4rem;
+  }
+
+  .form {
+    padding: 1.25rem 1rem;
+  }
+  form {
+    max-width: 85%;
+    padding: 0.5rem 0.75rem;
+  }
+  input, select, textarea {
+    font-size: 0.8rem;
+  }
+  form label {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    padding: 1.25rem;
+  }
+  .footer h2 {
+    font-size: 0.95rem;
+  }
+  .footer .contacts {
+    gap: 0.4rem;
+  }
+}

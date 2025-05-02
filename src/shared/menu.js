@@ -1,4 +1,5 @@
 import { ReactComponent as Logo } from '../imgs/icons/лого-min.svg'
+import { useState } from 'react';
 
 export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRevPage, targRegFAQ, targAbPage }) {
     function handleClickMain() {
@@ -49,12 +50,20 @@ export default function NavMenu({ targRefMain, targRefOffer, targPlusRef, targRe
             });
         }
     }
+    const [isMenuOpen, setMenuOpen] = useState(false);
+    function toggleMenu() {
+        setMenuOpen(!isMenuOpen);
+    }
 
     return (
         <div className="nav">
                 <a onClick={handleClickMain}><Logo height={55} width={55}></Logo></a>
                 <a onClick={handleClickMain}><h7 className="compName">Дом здесь</h7></a>
-            <div className="menu">
+
+            <button className="burger-menu" onClick={toggleMenu}>
+                ☰
+            </button>
+            <div className={`menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
                 <a onClick={handleClickOffe}>Квартиры</a>
                 <a onClick={handleClickPluses}>Преимущества</a>
                 <a onClick={handleClickRevs}>Отзывы</a>
