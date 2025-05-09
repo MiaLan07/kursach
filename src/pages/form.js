@@ -26,6 +26,7 @@ export default function Form({ targForm, opisForForm, setOpisForForm }) {
         event.preventDefault();
         const phoneRegex = /^(\+7|8)?\d{10}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const nameRegex = /^\S+\s+\S+/;
 
         if (!phoneRegex.test(number)) {
             alert("Введите корректный номер телефона (+7XXXXXXXXXX или 8XXXXXXXXXX)!");
@@ -35,6 +36,10 @@ export default function Form({ targForm, opisForForm, setOpisForForm }) {
         if (email && !emailRegex.test(email)) {
             alert("Введите корректный email!");
             return;
+        }
+        if(!nameRegex.test(names)) {
+            alert("Введите хотя-бы имя и фамилию")
+            return
         }
 
         if (!service) {

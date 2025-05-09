@@ -297,6 +297,11 @@
   .pluses ul li p {
     font-size: 0.95rem;
     text-align: center;
+    max-height: max-content;
+    margin: 0.938rem;
+  }
+  .pluses ul li:hover p {
+    max-height: initial;
   }
 
   .reviews {
@@ -317,6 +322,10 @@
     font-size: 0.9rem;
     text-align: center;
   }
+  .revs div.rev:hover {
+    transform: initial;
+    box-shadow: initial;
+  }
 
   .faq {
     padding: 2rem 4rem;
@@ -334,6 +343,10 @@
   }
   .faqitem div p {
     font-size: 0.9rem;
+  }
+  .faqitem:hover {
+    transform: initial;
+    box-shadow: initial;
   }
 
   .about {
@@ -483,7 +496,7 @@
     height: 8rem;
   }
   .costs.homes div h6 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .fulloffer .costs.homes div h6 {
     font-size: 0.95rem;
@@ -523,6 +536,10 @@
   .pluses ul li p {
     font-size: 0.875rem;
   }
+  ul {
+    padding: 0;
+  }
+  
 
   .reviews {
     padding: 1.5rem 2rem;
